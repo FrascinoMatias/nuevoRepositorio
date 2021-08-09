@@ -1,0 +1,153 @@
+/*VARIABLES*/
+/*COMIENZA CODIGO CSS*/
+* {
+  margin: 0;
+  padding: 0; }
+
+h1 {
+  color: #4d0bc9;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+  font-size: 60px;
+  font-style: normal; }
+
+h2, h3, p, .tituloContacto {
+  color: white;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 150;
+  font-size: 30px;
+  letter-spacing: 2px;
+  margin-bottom: 17px;
+  padding-left: 30px; }
+
+h3 {
+  color: #4d0bc9;
+  padding-left: 0px;
+  font-size: 20px; }
+
+p, .tituloContacto {
+  font-size: 16px;
+  line-height: 1.6;
+  padding-left: 0px; }
+
+.imgRedes {
+  width: 50px;
+  height: 50px; }
+
+.imgLogo {
+  width: 150px;
+  height: 150px; }
+
+.espacio {
+  margin-bottom: 17px;
+  margin-top: 17px; }
+
+footer {
+  margin-top: 250px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end; }
+
+body {
+  margin-left: 10px;
+  background-image: linear-gradient(to top, #b3a1fd, #5c438d); }
+
+.navegador .navegador__lista {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around; }
+
+.navegador .navegador__item {
+  font-family: "Quicksand", sans-serif;
+  font-size: 20px;
+  list-style-type: none; }
+
+.navegador .navegador__link {
+  color: white;
+  font-style: normal;
+  font-size: 20px;
+  font-weight: 100;
+  text-decoration: none;
+  letter-spacing: 2px; }
+
+header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around; }
+
+/*ETIQUETAS INDEX*/
+.main {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 250px 250px;
+  grid-template-areas: "area1 area2" "area1 area2";
+  column-gap: 20px;
+  justify-items: center;
+  align-items: center; }
+  .main__titulo {
+    grid-area: area1; }
+  .main__aside {
+    grid-area: area2;
+    width: 400px;
+    height: 400px; }
+  .main__imagen {
+    width: 100%;
+    height: 100%;
+    animation-name: aparicion;
+    animation-duration: 2s; }
+
+#botonMain {
+  margin-left: 35%;
+  font-size: 17px;
+  overflow: hidden;
+  font-family: "Quicksand", sans-serif; }
+
+/*FIN ETIQUETAS INDEX*/
+/*ETIQUETAS ACERCADEMI*/
+.imagenes {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  flex-direction: row;
+  overflow: hidden;
+  width: 100%;
+  height: 400px;
+  align-content: center; }
+  .imagenes__item {
+    width: 400px;
+    height: 400px;
+    animation-name: aparicion;
+    animation-duration: 2s; }
+
+@keyframes aparicion {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+/* FIN ETIQUETAS ACERCADEMI */
+/* ETIQUETAS PROYECTOS */
+#jordi {
+  display: flex;
+  justify-content: space-around; }
+
+/* FIN ETIQUETAS PROYECTOS */
+/* ETIQUETAS SERVICIOS */
+.servicios {
+  padding: 0%;
+  list-style-type: none; }
+  .servicios__items {
+    margin-bottom: 17px;
+    margin-top: 17px; }
+
+/* FIN ETIQUETAS SERVICIOS */
+/* ETIQUETAS CONTACTO */
+#barra {
+  width: 50%; }
+
+#comentarios {
+  display: block;
+  margin-bottom: 10px;
+  width: 50%; }
