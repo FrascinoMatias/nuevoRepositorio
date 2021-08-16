@@ -3,168 +3,738 @@ $colorPrincipal:rgb(77, 11, 201);
 $colorSecundario: white;
 $fuente: 'Quicksand', sans-serif;
 /*COMIENZA CODIGO CSS*/
-*{
-    margin: 0;  
-    padding: 0;
-}
-@mixin tamanio ($ancho, $alto) {
-    width: $ancho;
-    height: $alto;
-}
-h1{
-    color: $colorPrincipal;
-    font-family: $fuente;
-    font-weight: 700;
-    font-size: 60px;
-    font-style: normal;
-}
-h2{
-    color:$colorSecundario;
-    font-family: $fuente;
-    font-weight: 150;
-    font-size: 30px;
-    letter-spacing: 2px;
-    margin-bottom: 17px;
-    padding-left: 30px;
-}
-h3{
-    @extend h2;
-    color:$colorPrincipal;
-    padding-left:0px;
-    font-size: 20px;
-}
-p{
-    @extend h2;
-    font-size: 16px;
-    line-height: 1.6;
-    padding-left: 0px;
-}
-.imgRedes{
-    @include tamanio(50px, 50px);
-}
-.imgLogo{
-   @include tamanio(150px , 150px );
-}
-.espacio{
-    margin-bottom: 17px;
-    margin-top: 17px;
-}
-footer{
-    margin-top: 250px;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-}
-body{
-    margin-left: 10px;
-    background-image: linear-gradient(to top,rgb(179, 161, 253),rgb(92, 67, 141));
-}
-.navegador{
-    .navegador__lista{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: space-around
+/*MEDIA 0 A 350PX MOBILE FIRST*/
+@media only screen and (max-width: 350px){
+    *{
+        margin: 0;  
+        padding: 0;
     }
-    .navegador__item{
+    @mixin tamanio ($ancho, $alto) {
+        width: $ancho;
+        height: $alto;
+    }
+    h1{
+        color: $colorPrincipal;
         font-family: $fuente;
-        font-size: 20px;
-        list-style-type: none;
-    }
-    .navegador__link{
-        color: $colorSecundario;
+        font-weight: 700;
+        font-size: 30px;
         font-style: normal;
-        font-size: 20px;
-        font-weight: 100;
-        text-decoration: none;
+        text-align: center;
+    }
+    h2{
+        color:$colorSecundario;
+        font-family: $fuente;
+        font-weight: 150;
+        font-size: 15px;
         letter-spacing: 2px;
+        margin-bottom: 17px;
+        text-align: center;
     }
-}
-header{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-around
-}
-/*ETIQUETAS INDEX*/
-.main{
-    display: grid;
-        grid-template-columns: 50% 50%;
-        grid-template-rows: 250px 250px;
-        grid-template-areas: "area1 area2"
-                                "area1 area2";
-        column-gap: 20px;
-        justify-items: center;
-        align-items: center;
-    &__titulo{
-        grid-area: area1;
+    h3{
+        @extend h2;
+        color:$colorPrincipal;
+        padding-left:0px;
+        font-size: 20px;
     }
-    &__aside{
-        grid-area: area2;
-        @include tamanio(400px , 400px );
+    p{
+        @extend h2;
+        font-size: 10px;
+        line-height: 1.6;
+        padding-left: 0px;
     }
-    &__imagen{
-       @include tamanio(100% , 100% );
-        animation-name: aparicion;
-        animation-duration: 2s;
+    .imgRedes{
+        @include tamanio(50px, 50px);
     }
-}
-#botonMain{
-    margin-left: 35%;
-    font-size: 17px;
-    overflow: hidden;
-    font-family: $fuente;
-}
-/*FIN ETIQUETAS INDEX*/
-/*ETIQUETAS ACERCADEMI*/
-.imagenes{
-    display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        flex-direction: row;
-        overflow: hidden;
-        @include tamanio(100% , 400px );
-        align-content: center;
-    &__item{
-        @include tamanio(400px , 400px);
-        animation-name: aparicion;
-        animation-duration: 2s;
+    .imgLogo{
+       @include tamanio(150px , 150px );
     }
-}
-@keyframes aparicion{
-    from{
-        opacity: 0;
-    }
-    to{
-        opacity: 1;
-    }
-}
-/* FIN ETIQUETAS ACERCADEMI */
-/* ETIQUETAS PROYECTOS */
-#jordi{
-    display: flex;
-    justify-content: space-around;
-}
-/* FIN ETIQUETAS PROYECTOS */
-/* ETIQUETAS SERVICIOS */
-.servicios{
-    padding: 0%;
-    list-style-type: none;
-    &__items{
+    .espacio{
         margin-bottom: 17px;
         margin-top: 17px;
     }
+    footer{
+        margin-top: 250px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    body{
+        background-image: linear-gradient(to top,rgb(179, 161, 253),rgb(92, 67, 141));
+    }
+    .navegador{
+        &__lista{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-evenly;
+            padding: 0%;
+            margin-left: 3%;
+        }
+        &__item{
+            font-family: $fuente;
+            font-size: 15px;
+            list-style-type: none;
+        }
+        &__link{
+            color: $colorSecundario;
+            font-style: normal;
+            font-size: 10px;
+            font-weight: 100;
+            text-decoration: none;
+            letter-spacing: 2px;
+        }
+    }
+    header{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+    }
+    /*ETIQUETAS INDEX*/
+    .main{
+        margin-right: 10%;
+        display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 250px 250px;
+            grid-template-areas: "area1 area1"
+                                    "area2 area2";
+            column-gap: 20px;
+            justify-items: center;
+            align-items: center;
+        &__titulo{
+            grid-area: area1;
+        }
+        &__aside{
+            grid-area: area2;
+            @include tamanio(15rem , 15rem );
+        }
+        &__imagen{
+           @include tamanio(100% , 100% );
+            animation-name: aparicion;
+            animation-duration: 2s;
+        }
+    }
+    #botonMain{
+        margin-left: 60px;
+        font-size: 17px;
+        overflow: hidden;
+        font-family: $fuente;
+    }
+    /*FIN ETIQUETAS INDEX*/
+    /*ETIQUETAS ACERCADEMI*/
+    .imagenes{
+        display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            flex-direction: column;
+            overflow: hidden;
+            @include tamanio(100% , 400px );
+            align-content: center;
+        &__item{
+            @include tamanio(150px , 150px);
+            animation-name: aparicion;
+            animation-duration: 2s;
+        }
+    }
+    @keyframes aparicion{
+        from{
+            opacity: 0;
+        }
+        to{
+            opacity: 1;
+        }
+    }
+    /* FIN ETIQUETAS ACERCADEMI */
+    /* ETIQUETAS PROYECTOS */
+    .proyectos{
+        @include tamanio(100% , 50% );
+    }
+    /* FIN ETIQUETAS PROYECTOS */
+    /* ETIQUETAS SERVICIOS */
+    .servicios{
+        padding: 0%;
+        list-style-type: none;
+        &__items{
+            margin-bottom: 17px;
+            margin-top: 17px;
+        }
+    }
+    /* FIN ETIQUETAS SERVICIOS */
+    /* ETIQUETAS CONTACTO */
+    #barra{
+        width: 97%;
+    }
+    .tituloContacto{
+        @extend p ;
+    }
+    #comentarios{
+        display: block;
+        margin-bottom: 10px;
+        width: 97%;
+    }
+    .mapa{
+        margin: 5% 0% 0% 1%;
+        @include tamanio(97% , 250px );
+    }
 }
-/* FIN ETIQUETAS SERVICIOS */
-/* ETIQUETAS CONTACTO */
-#barra{
-    width: 50%;
+/*MEDIA 350*/
+@media only screen and (min-width:350px){
+    *{
+        margin: 0;  
+        padding: 0;
+    }
+    @mixin tamanio ($ancho, $alto) {
+        width: $ancho;
+        height: $alto;
+    }
+    h1{
+        color: $colorPrincipal;
+        font-family: $fuente;
+        font-weight: 700;
+        font-size: 40px;
+        font-style: normal;
+        text-align: center;
+    }
+    h2{
+        color:$colorSecundario;
+        font-family: $fuente;
+        font-weight: 150;
+        font-size: 20px;
+        letter-spacing: 2px;
+        margin-bottom: 17px;
+    }
+    h3{
+        color:$colorPrincipal;
+        padding-left:0px;
+        font-size: 15px;
+        letter-spacing: 2px;
+        font-family: $fuente;
+        font-weight: 150;
+        margin-bottom: 17px;
+    }
+    p{
+        font-size: 10px;
+        line-height: 1.6;
+        padding-left: 0px;
+        color:$colorSecundario;
+        font-family: $fuente;
+        font-weight: 150;
+        letter-spacing: 2px;
+        margin-bottom: 17px;
+    }
+    .imgRedes{
+        @include tamanio(50px, 50px);
+    }
+    .imgLogo{
+       @include tamanio(150px , 150px );
+    }
+    .espacio{
+        margin-bottom: 17px;
+        margin-top: 17px;
+    }
+    footer{
+        margin-top: 250px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    body{
+        background-image: linear-gradient(to top,rgb(179, 161, 253),rgb(92, 67, 141));
+    }
+    .navegador{
+        &__lista{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+            padding-left: 0%;
+        }
+        &__item{
+            font-family: $fuente;
+            font-size: 10px;
+            list-style-type: none;
+        }
+        &__link{
+            color: $colorSecundario;
+            font-style: normal;
+            font-size: 100%;
+            font-weight: 100;
+            text-decoration: none;
+            letter-spacing: 2px;
+            text-align: center;
+        }
+    }
+    header{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+    }
+    /*ETIQUETAS INDEX*/
+    .main{
+        display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 250px 250px;
+            grid-template-areas: "area1 area1"
+                                    "area2 area2";
+            column-gap: 20px;
+            justify-items: center;
+            align-items: center;
+        &__titulo{
+            grid-area: area1;
+        }
+        &__aside{
+            grid-area: area2;
+            @include tamanio(300px , 300px );
+        }
+        &__imagen{
+           @include tamanio(100% , 100% );
+            animation-name: aparicion;
+            animation-duration: 2s;
+        }
+    }
+    #botonMain{
+        margin-left: 30%;
+        font-size: 17px;
+        overflow: hidden;
+        font-family: $fuente;
+    }
+    /*FIN ETIQUETAS INDEX*/
+    /*ETIQUETAS ACERCADEMI*/
+    .imagenes{
+        display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            flex-direction: row;
+            @include tamanio(100% , 100% );
+            align-content: center;
+        &__item{
+            @include tamanio(250px , 250px);
+            animation-name: aparicion;
+            animation-duration: 2s;
+        }
+    }
+    @keyframes aparicion{
+        from{
+            opacity: 0;
+        }
+        to{
+            opacity: 1;
+        }
+    }
+    /* FIN ETIQUETAS ACERCADEMI */
+    /* ETIQUETAS PROYECTOS */
+    .proyectos{
+        @include tamanio(100% , 50% );
+    }
+    /* FIN ETIQUETAS PROYECTOS */
+    /* ETIQUETAS SERVICIOS */
+    .servicios{
+        padding: 0%;
+        list-style-type: none;
+        &__items{
+            margin-bottom: 17px;
+            margin-top: 17px;
+        }
+        &__contenido{
+            font-weight: bolder;
+        }
+    }
+    /* FIN ETIQUETAS SERVICIOS */
+    /* ETIQUETAS CONTACTO */
+    #barra{
+        width: 97%;
+    }
+    .tituloContacto{
+        font-size: 16px;
+        line-height: 1.6;
+        padding-left: 0px;
+        color:$colorSecundario;
+        font-family: $fuente;
+        font-weight: 150;
+        letter-spacing: 2px;
+        margin-bottom: 17px;
+    }
+    #comentarios{
+        display: block;
+        margin-bottom: 10px;
+        width: 97%;
+    }
+    .mapa{
+        margin: 5% 0% 0% 1%;
+        @include tamanio(97% , 250px );
+    }
 }
-.tituloContacto{
-    @extend p ;
+/*MEDIA 540*/
+@media only screen and (min-width: 540px){
+    *{
+        margin: 0;  
+        padding: 0;
+    }
+    @mixin tamanio ($ancho, $alto) {
+        width: $ancho;
+        height: $alto;
+    }
+    h1{
+        color: $colorPrincipal;
+        font-family: $fuente;
+        font-weight: 700;
+        font-size: 40px;
+        font-style: normal;
+        text-align: center;
+    }
+    h2{
+        color:$colorSecundario;
+        font-family: $fuente;
+        font-weight: 150;
+        font-size: 20px;
+        letter-spacing: 2px;
+        margin-bottom: 17px;
+    }
+    h3{
+        color:$colorPrincipal;
+        padding-left:0px;
+        font-size: 20px;
+        letter-spacing: 2px;
+        font-family: $fuente;
+        font-weight: 150;
+        margin-bottom: 17px;
+    }
+    p{
+        font-size: 12px;
+        line-height: 1.6;
+        padding-left: 0px;
+        color:$colorSecundario;
+        font-family: $fuente;
+        font-weight: 150;
+        letter-spacing: 2px;
+        margin-bottom: 17px;
+    }
+    .imgRedes{
+        @include tamanio(50px, 50px);
+    }
+    .imgLogo{
+       @include tamanio(150px , 150px );
+    }
+    .espacio{
+        margin-bottom: 17px;
+        margin-top: 17px;
+    }
+    footer{
+        margin-top: 250px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    body{
+        background-image: linear-gradient(to top,rgb(179, 161, 253),rgb(92, 67, 141));
+    }
+    .navegador{
+        &__lista{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+            padding-left: 0%;
+        }
+        &__item{
+            font-family: $fuente;
+            font-size: 10px;
+            list-style-type: none;
+        }
+        &__link{
+            color: $colorSecundario;
+            font-style: normal;
+            font-size: 130%;
+            font-weight: 100;
+            text-decoration: none;
+            letter-spacing: 2px;
+            text-align: center;
+        }
+    }
+    header{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+    }
+    /*ETIQUETAS INDEX*/
+    .main{
+        display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 250px 250px;
+            grid-template-areas: "area1 area1"
+                                    "area2 area2";
+            column-gap: 20px;
+            justify-items: center;
+            align-items: center;
+        &__titulo{
+            grid-area: area1;
+        }
+        &__aside{
+            grid-area: area2;
+            @include tamanio(300px , 300px );
+        }
+        &__imagen{
+           @include tamanio(100% , 100% );
+            animation-name: aparicion;
+            animation-duration: 2s;
+        }
+    }
+    #botonMain{
+        margin-left: 30%;
+        font-size: 17px;
+        overflow: hidden;
+        font-family: $fuente;
+    }
+    /*FIN ETIQUETAS INDEX*/
+    /*ETIQUETAS ACERCADEMI*/
+    .imagenes{
+        display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            flex-direction: row;
+            @include tamanio(100% , 100% );
+            align-content: center;
+        &__item{
+            @include tamanio(250px , 250px);
+            animation-name: aparicion;
+            animation-duration: 2s;
+        }
+    }
+    @keyframes aparicion{
+        from{
+            opacity: 0;
+        }
+        to{
+            opacity: 1;
+        }
+    }
+    /* FIN ETIQUETAS ACERCADEMI */
+    /* ETIQUETAS PROYECTOS */
+    .proyectos{
+        @include tamanio(100% , 50% );
+    }
+    /* FIN ETIQUETAS PROYECTOS */
+    /* ETIQUETAS SERVICIOS */
+    .servicios{
+        padding: 0%;
+        list-style-type: none;
+        &__items{
+            margin-bottom: 17px;
+            margin-top: 17px;
+        }
+        &__contenido{
+            font-weight: bolder;
+        }
+    }
+    /* FIN ETIQUETAS SERVICIOS */
+    /* ETIQUETAS CONTACTO */
+    #barra{
+        width: 97%;
+    }
+    .tituloContacto{
+        font-size: 16px;
+        line-height: 1.6;
+        padding-left: 0px;
+        color:$colorSecundario;
+        font-family: $fuente;
+        font-weight: 150;
+        letter-spacing: 2px;
+        margin-bottom: 17px;
+    }
+    #comentarios{
+        display: block;
+        margin-bottom: 10px;
+        width: 97%;
+    }
+    .mapa{
+        margin: 5% 0% 0% 1%;
+        @include tamanio(97% , 350px );
+    }
 }
-#comentarios{
-    display: block;
-    margin-bottom: 10px;
-    width: 50%;
+/*MEDIA 1024*/
+@media only screen and (min-width: 1024px){
+    *{
+        margin: 0;  
+        padding: 0;
+    }
+    @mixin tamanio ($ancho, $alto) {
+        width: $ancho;
+        height: $alto;
+    }
+    h1{
+        color: $colorPrincipal;
+        font-family: $fuente;
+        font-weight: 700;
+        font-size: 60px;
+        font-style: normal;
+    }
+    h2{
+        color:$colorSecundario;
+        font-family: $fuente;
+        font-weight: 150;
+        font-size: 30px;
+        letter-spacing: 2px;
+        margin-bottom: 17px;
+        padding-left: 30px;
+    }
+    h3{
+        color:$colorPrincipal;
+        padding-left:0px;
+        font-size: 20px;
+        letter-spacing: 2px;
+        margin-bottom: 17px;
+        font-family: $fuente;
+        font-weight: 150;
+    }
+    p{
+        font-size: 16px;
+        line-height: 1.6;
+        padding-left: 0px;
+        letter-spacing: 2px;
+        margin-bottom: 17px;
+        color:$colorSecundario;
+        font-family: $fuente;
+        font-weight: 150;
+    }
+    .imgRedes{
+        @include tamanio(50px, 50px);
+    }
+    .imgLogo{
+       @include tamanio(150px , 150px );
+    }
+    .espacio{
+        margin-bottom: 17px;
+        margin-top: 17px;
+    }
+    footer{
+        margin-top: 250px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    body{
+        margin-left: 10px;
+        background-image: linear-gradient(to top,rgb(179, 161, 253),rgb(92, 67, 141));
+    }
+    .navegador{
+        &__lista{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-around
+        }
+        &__item{
+            font-family: $fuente;
+            font-size: 20px;
+            list-style-type: none;
+        }
+        &__link{
+            color: $colorSecundario;
+            font-style: normal;
+            font-size: 20px;
+            font-weight: 100;
+            text-decoration: none;
+            letter-spacing: 2px;
+        }
+    }
+    header{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+    }
+    /*ETIQUETAS INDEX*/
+    .main{
+        display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 250px 250px;
+            grid-template-areas: "area1 area2"
+                                    "area1 area2";
+            column-gap: 20px;
+            justify-items: center;
+            align-items: center;
+        &__titulo{
+            grid-area: area1;
+        }
+        &__aside{
+            grid-area: area2;
+            @include tamanio(400px , 400px );
+        }
+        &__imagen{
+           @include tamanio(100% , 100% );
+            animation-name: aparicion;
+            animation-duration: 2s;
+        }
+    }
+    #botonMain{
+        margin-left: 35%;
+        font-size: 17px;
+        overflow: hidden;
+        font-family: $fuente;
+    }
+    /*FIN ETIQUETAS INDEX*/
+    /*ETIQUETAS ACERCADEMI*/
+    .imagenes{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        flex-direction: row;
+        @include tamanio(100% , 100% );
+        align-content: center;
+        &__item{
+            @include tamanio(350px , 350px);
+            animation-name: aparicion;
+            animation-duration: 2s;
+        }
+    }
+    @keyframes aparicion{
+        from{
+            opacity: 0;
+        }
+        to{
+            opacity: 1;
+        }
+    }
+    /* FIN ETIQUETAS ACERCADEMI */
+    /* ETIQUETAS PROYECTOS */
+    .proyectos{
+        margin-left: 0.5%;
+        @include tamanio(98% , 50%);
+    }
+    /* FIN ETIQUETAS PROYECTOS */
+    /* ETIQUETAS SERVICIOS */
+    .servicios{
+        padding: 0%;
+        list-style-type: none;
+        &__items{
+            margin-bottom: 17px;
+            margin-top: 17px;
+        }
+    }
+    /* FIN ETIQUETAS SERVICIOS */
+    /* ETIQUETAS CONTACTO */
+    #barra{
+        width: 70%;
+    }
+    .tituloContacto{
+        font-size: 16px;
+        line-height: 1.6;
+        padding-left: 0px;
+        letter-spacing: 2px;
+        margin-bottom: 17px;
+        color:$colorSecundario;
+        font-family: $fuente;
+        font-weight: 150;
+    }
+    #comentarios{
+        display: block;
+        margin-bottom: 10px;
+        width: 70%;
+    }
+    .mapa{
+        margin: 5% 0% 0% 0%;
+        @include tamanio(70% , 450px );
+    }
 }
