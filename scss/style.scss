@@ -61,29 +61,20 @@ $fuente: 'Quicksand', sans-serif;
     body{
         background-image: linear-gradient(to top,rgb(179, 161, 253),rgb(92, 67, 141));
     }
-    .navegador{
-        &__lista{
-            display: flex;
-            flex-direction: row;
-            flex-wrap: nowrap;
-            justify-content: space-evenly;
-            padding: 0%;
-            margin-left: 3%;
-        }
-        &__item{
-            font-family: $fuente;
-            font-size: 15px;
-            list-style-type: none;
-        }
-        &__link{
-            color: $colorSecundario;
-            font-style: normal;
-            font-size: 10px;
-            font-weight: 100;
-            text-decoration: none;
-            letter-spacing: 2px;
-        }
+    #navegador{
+        display: flex;
+        flex-direction: column !important;
+        justify-content:space-around;
+        width: 100%;
     }
+    #navegador__link{
+        color: $colorSecundario;
+        font-style: normal;
+        font-size: 10px;
+        font-weight: 100;
+        text-decoration: none;
+        letter-spacing: 2px;
+    }    
     header{
         display: flex;
         flex-direction: row;
@@ -241,29 +232,20 @@ $fuente: 'Quicksand', sans-serif;
     body{
         background-image: linear-gradient(to top,rgb(179, 161, 253),rgb(92, 67, 141));
     }
-    .navegador{
-        &__lista{
-            display: flex;
-            flex-direction: row;
-            flex-wrap: nowrap;
-            justify-content: space-around;
-            padding-left: 0%;
-        }
-        &__item{
-            font-family: $fuente;
-            font-size: 10px;
-            list-style-type: none;
-        }
-        &__link{
-            color: $colorSecundario;
-            font-style: normal;
-            font-size: 100%;
-            font-weight: 100;
-            text-decoration: none;
-            letter-spacing: 2px;
-            text-align: center;
-        }
+    #navegador{
+        display: flex;
+        flex-direction: column;
+        justify-content:space-around;
+        width: 100%;
     }
+    #navegador__link{
+        color: $colorSecundario;
+        font-style: normal;
+        font-size: 15px;
+        font-weight: 100;
+        text-decoration: none;
+        letter-spacing: 2px;
+    }  
     header{
         display: flex;
         flex-direction: row;
@@ -429,29 +411,20 @@ $fuente: 'Quicksand', sans-serif;
     body{
         background-image: linear-gradient(to top,rgb(179, 161, 253),rgb(92, 67, 141));
     }
-    .navegador{
-        &__lista{
-            display: flex;
-            flex-direction: row;
-            flex-wrap: nowrap;
-            justify-content: space-around;
-            padding-left: 0%;
-        }
-        &__item{
-            font-family: $fuente;
-            font-size: 10px;
-            list-style-type: none;
-        }
-        &__link{
-            color: $colorSecundario;
-            font-style: normal;
-            font-size: 130%;
-            font-weight: 100;
-            text-decoration: none;
-            letter-spacing: 2px;
-            text-align: center;
-        }
+    #navegador{
+        display: flex;
+        flex-direction: column;
+        justify-content:space-around;
+        width: 100%;
     }
+    #navegador__link{
+        color: $colorSecundario;
+        font-style: normal;
+        font-size: 130%;
+        font-weight: 100;
+        text-decoration: none;
+        letter-spacing: 2px;
+    }  
     header{
         display: flex;
         flex-direction: row;
@@ -553,6 +526,23 @@ $fuente: 'Quicksand', sans-serif;
         @include tamanio(97% , 350px );
     }
 }
+/*MEDIA 991*/
+@media only screen and (min-width:991px){
+    #navegador{
+        display: flex;
+        flex-direction: row;
+        justify-content:space-around;
+        width: 100%;
+    }
+    #navegador__link{
+        color: $colorSecundario;
+        font-style: normal;
+        font-size: 20px;
+        font-weight: 100;
+        text-decoration: none;
+        letter-spacing: 2px;
+    }
+}
 /*MEDIA 1024*/
 @media only screen and (min-width: 1024px){
     *{
@@ -618,26 +608,19 @@ $fuente: 'Quicksand', sans-serif;
         margin-left: 10px;
         background-image: linear-gradient(to top,rgb(179, 161, 253),rgb(92, 67, 141));
     }
-    .navegador{
-        &__lista{
-            display: flex;
-            flex-direction: row;
-            flex-wrap: nowrap;
-            justify-content: space-around
-        }
-        &__item{
-            font-family: $fuente;
-            font-size: 20px;
-            list-style-type: none;
-        }
-        &__link{
-            color: $colorSecundario;
-            font-style: normal;
-            font-size: 20px;
-            font-weight: 100;
-            text-decoration: none;
-            letter-spacing: 2px;
-        }
+    #navegador{
+        display: flex;
+        flex-direction: row;
+        justify-content:space-around;
+        width: 100%;
+    }
+    #navegador__link{
+        color: $colorSecundario;
+        font-style: normal;
+        font-size: 20px;
+        font-weight: 100;
+        text-decoration: none;
+        letter-spacing: 2px;
     }
     header{
         display: flex;
