@@ -43,7 +43,8 @@ $fuente: 'Quicksand', sans-serif;
         padding-left: 0px;
     }
     .imgRedes{
-        @include tamanio(50px, 50px);
+        @include tamanio(30px, 30px);
+        margin-left:7px;
     }
     .imgLogo{
        @include tamanio(150px , 150px );
@@ -214,7 +215,8 @@ $fuente: 'Quicksand', sans-serif;
         margin-bottom: 17px;
     }
     .imgRedes{
-        @include tamanio(50px, 50px);
+        @include tamanio(45px, 45px);
+        margin-left: 7px;
     }
     .imgLogo{
        @include tamanio(150px , 150px );
